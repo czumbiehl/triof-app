@@ -12,5 +12,5 @@ secret_client = SecretClient(vault_url=key_vault_uri, credential=credential)
 
 retrieved_secret_name = secret_client.get_secret(secret_name)
 retrieved_secret_url = secret_client.get_secret(secret_url)
-print(f"The secret key is: {retrieved_secret_name.value}")
-print(f"The secret url is: {retrieved_secret_url.value}")
+# print(f"The secret key is: {retrieved_secret_name.value}")
+#  print(f"The secret url is: {retrieved_secret_url.value}")
