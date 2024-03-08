@@ -16,7 +16,9 @@ secret_key = "customvision-key-caro"
 secret_url = "customvision-uri-caro"
 secret_id = "custom-vision-project-id-caro"
 
-credential = DefaultAzureCredential()
+credential = DefaultAzureCredential(
+    managed_identity_client_id="bd9d102a-6b4a-4f69-aa2b-71b2947fa1d0"
+)
 secret_client = SecretClient(vault_url=key_vault_uri, credential=credential)
 
 prediction_key = secret_client.get_secret(secret_key).value
